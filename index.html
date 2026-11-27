@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neko Tempurá</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+    <div class="faixa-topo">
+        <div class="container d-flex justify-content-between align-items-center">
+            <span>Neko Tempurá • cozinha japonesa</span>
+            <span class="d-none d-sm-inline">feito na hora</span>
+        </div>
+    </div>
+
+    <header class="topo-site sticky-top">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand marca d-flex align-items-center gap-2" href="#inicio">
+                    <img src="c9c95be8-5955-404f-8cfc-83e400fa0907.jpg" alt="Mascote Neko" class="foto-marca">
+                    <span>neko <b>tempurá</b></span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+                    aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav mx-auto my-2 my-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#categorias">Categorias</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#cardapio">Cardápio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#resumo-pedido">Pedido</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                    </ul>
+
+                    <a href="#resumo-pedido" class="btn-pedido">
+                        <i class="bi bi-bag"></i>
+                        Pedido <span class="qtd-pedido" id="cartCount">0</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="capa" id="inicio">
+            <div class="container">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-7">
+                        <span class="selo-pequeno">NEKO TEMPURÁ • LOJA</span>
+                        <h1>Tempurá crocante, combinados e pratos da casa.</h1>
+                        <p class="texto-capa">
+                            Monte seu pedido escolhendo entre sushis, temakis, tempurá, lámen, yakisoba e guioza.
+                        </p>
+                        <div class="d-flex flex-wrap align-items-center gap-3 mt-4">
+                            <a href="#cardapio" class="btn-escuro">Ir para o cardápio</a>
+                            <span class="detalhe-linha">Cardápio • Estoque • Carrinho</span>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="moldura-neko">
+                            <img src="c9c95be8-5955-404f-8cfc-83e400fa0907.jpg" alt="Neko, mascote do restaurante" class="foto-capa">
+                            <div class="rodape-moldura">
+                                <strong>Neko</strong>
+                                <small>mascote da cozinha</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao-cats" id="categorias">
+            <div class="container">
+                <div class="cabecalho-bloco">
+                    <h2>Categorias</h2>
+                    <button type="button" class="btn-reset" id="btnLimparFiltro">Ver todos</button>
+                </div>
+
+                <div class="row g-3">
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <button type="button" class="cartao-cat" data-categoria="sushis">
+                            <div class="caixa-foto-cat">
+                                <img src="7ae101c6-91cd-4ec1-8507-595675a9d40f.jpg" alt="Sushis">
+                            </div>
+                            <span>Sushis</span>
+                        </button>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <button type="button" class="cartao-cat" data-categoria="temakis">
+                            <div class="caixa-foto-cat">
+                                <img src="18aeaa31-b2f0-4aa0-92fc-07b899fea5e2.jpg" alt="Temakis">
+                            </div>
+                            <span>Temakis</span>
+                        </button>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <button type="button" class="cartao-cat" data-categoria="tempura">
+                            <div class="caixa-foto-cat">
+                                <img src="f9696b17-1268-4dda-8c4d-cf01a0fc84a8.jpg" alt="Tempurá">
+                            </div>
+                            <span>Tempurá</span>
+                        </button>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <button type="button" class="cartao-cat" data-categoria="lamen">
+                            <div class="caixa-foto-cat">
+                                <img src="fea1b850-abe0-44a0-9fbe-c4a76bc4f808.jpg" alt="Lámen">
+                            </div>
+                            <span>Lámen</span>
+                        </button>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <button type="button" class="cartao-cat" data-categoria="yakisoba">
+                            <div class="caixa-foto-cat">
+                                <img src="e81cf581-73cd-43a7-b065-4de7b7172f0f.jpg" alt="Yakisoba">
+                            </div>
+                            <span>Yakisoba</span>
+                        </button>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <button type="button" class="cartao-cat" data-categoria="guioza">
+                            <div class="caixa-foto-cat">
+                                <img src="667152ea-d072-44a9-a40d-692ecd120c7d.jpg" alt="Guioza">
+                            </div>
+                            <span>Guioza</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao-menu" id="cardapio">
+            <div class="container" id="produtos">
+                <div class="cabecalho-bloco flex-wrap gap-3">
+                    <div>
+                        <h2>Cardápio</h2>
+                        <p class="status-filtro" id="filtroAtivoTexto">Todos os pratos</p>
+                    </div>
+
+                    <div class="campo-busca">
+                        <i class="bi bi-search"></i>
+                        <input type="search" id="productSearch" class="form-control" placeholder="Buscar no cardápio...">
+                    </div>
+                </div>
+
+                <div class="row g-4 mt-1" id="productList"></div>
+
+                <p class="aviso-vazio d-none" id="emptyMessage">
+                    Nada por aqui com esse nome.
+                </p>
+            </div>
+        </section>
+
+        <section class="secao-menu pt-0" id="resumo-pedido">
+            <div class="container">
+                <div class="painel-sobre">
+                    <h2 class="mb-3">Seu Pedido</h2>
+                    <div id="listaCarrinho" class="mb-3">
+                        <p class="texto-sobre">Nenhum item adicionado ainda.</p>
+                    </div>
+
+                    <div class="row g-2 mb-3">
+                        <div class="col-md-4">
+                            <input type="text" id="clienteNome" class="form-control" placeholder="Seu nome (ex.: Bruna)">
+                        </div>
+                        <div class="col-md-4">
+                            <input type="email" id="clienteEmail" class="form-control" placeholder="Seu e-mail (opcional)">
+                        </div>
+                        <div class="col-md-4">
+                            <select id="formaPagamento" class="form-select" aria-label="Forma de pagamento">
+                                <option value="PIX">PIX</option>
+                                <option value="Cartao">Cartão</option>
+                                <option value="Boleto">Boleto</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+                        <strong class="fs-5">Total: <span id="totalCarrinho">R$ 0,00</span></strong>
+                        <button type="button" id="btnFinalizarPedido" class="btn-escuro border-0">
+                            Finalizar pedido
+                        </button>
+                    </div>
+                    <div id="mensagemPedido" class="mt-3"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao-sobre" id="sobre">
+            <div class="container">
+                <div class="painel-sobre">
+                    <div class="row align-items-center g-4">
+                        <div class="col-md-4 text-center">
+                            <img src="c9c95be8-5955-404f-8cfc-83e400fa0907.jpg" alt="Neko" class="foto-sobre">
+                        </div>
+                        <div class="col-md-8">
+                            <span class="selo-pequeno">SOBRE O PROJETO</span>
+                            <h2>Neko Tempurá</h2>
+                            <p class="texto-sobre">
+                                Projeto de comércio eletrônico de culinária japonesa com catálogo, busca,
+                                filtro por categoria e preparo para integração com banco de dados e carrinho.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape-site">
+        <div class="container d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2">
+            <span><strong>Neko Tempurá</strong></span>
+            <span>Projeto de e-commerce • 2026</span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
